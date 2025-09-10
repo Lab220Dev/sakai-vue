@@ -1,11 +1,11 @@
 <script setup>
-import { ProductService } from '@/service/ProductService';
+import { RetiradasService } from '@/service/RetiradasService';
 import { FilterMatchMode } from '@primevue/core/api';
 import { useToast } from 'primevue/usetoast';
 import { onMounted, ref } from 'vue';
 
 onMounted(() => {
-    ProductService.getProducts().then((data) => (products.value = data));
+    RetiradasService.getProducts().then((data) => (products.value = data));
 });
 
 const toast = useToast();
@@ -288,3 +288,4 @@ function getStatusLabel(status) {
         </Dialog>
     </div>
 </template>
+@/service/RecenService @/service/RetiradasService
