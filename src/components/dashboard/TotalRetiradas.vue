@@ -82,7 +82,7 @@ async function getDados(clienteSelecionado) {
     console.log(clienteSelecionado);
     dadosRetirada.value = [];
     const response = await axios.post(
-        'http://localhost:3050/retiradaRealizada',
+        'http://userlab-001-site15.atempurl.com/retiradaRealizada',
         {
             data: {
                 id_cliente: clienteSelecionado.value.id_cliente,

@@ -25,7 +25,7 @@ const login = async () => {
     controleEstado(true);
     try {
         // Enviando o email e senha para a API
-        const response = await axios.post('http://localhost:3050/login', {
+        const response = await axios.post('http://userlab-001-site15.atempurl.com/login', {
             login: email.value,
             senha: password.value
         });
@@ -51,6 +51,7 @@ const login = async () => {
         controleEstado(false);
     }
 };
+
 </script>
 
 <template>
@@ -82,6 +83,7 @@ const login = async () => {
             </div>
         </div>
     </div>
+    
 </template>
 
 <style scoped>

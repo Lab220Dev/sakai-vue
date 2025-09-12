@@ -7,7 +7,7 @@ import axios from 'axios';
  * Define a URL base da API. A URL é obtida de uma variável de ambiente `VITE_API_URL`
  * ou, se não estiver definida, usa o valor padrão 'http://localhost:3050/api'.
  */
-const baseURL = 'http://localhost:3050/';
+const baseURL = 'http://userlab-001-site15.atempurl.com';
 
 /**
  * Cria uma instância do `axios`, configurada com a URL base da API.

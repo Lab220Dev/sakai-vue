@@ -12,7 +12,6 @@ const ranking = ref([]); // Referência para o array de ranking
 const total = ref([]); // Referência para o array de ranking
 const tempo = ref(0);
 let socket; // Variável para armazenar a instância do socket
-let poolingDataInicialRecebido = false;
 let progressInterval = null;
 let changedDuringCycle = false;
 const refreshToken = () => {
@@ -22,7 +21,7 @@ const refreshToken = () => {
 };
 
 onMounted(() => {
-    socket = io('http://localhost:3050/', {
+    socket = io('http://userlab-001-site15.atempurl.com/', {
         extraHeaders: {
             Authorization: 'Bearer ' + store.userToken
         }
@@ -31,7 +30,6 @@ onMounted(() => {
     socket.on('connect', () => {
         //console.log('Socket connected:', socket.id);
         socket.emit('statusPooling', { tempo: valorTempo.value });
-        socket.emit('dataPooling');
         socket.emit('rankingPool');
         startCountdown();
     });
