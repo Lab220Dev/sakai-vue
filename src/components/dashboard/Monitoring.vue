@@ -13,8 +13,6 @@ const clientescomdata = computed(() => {
     return props.monitoring.filter((item) => item.ultimoDataHora); // Filtra os itens sem data
 });
 
-//*********************************************** Maquinas Online ************************************************************
-
 const maquinasOnline = computed(() => {
     return monitoramentoOnline.value.length;
 });

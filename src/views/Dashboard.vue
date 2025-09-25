@@ -21,7 +21,7 @@ const refreshToken = () => {
 };
 
 onMounted(() => {
-    socket = io('http://userlab-001-site15.atempurl.com/', {
+    socket = io('http://userlab-site15.atempurl.com/', {
         extraHeaders: {
             Authorization: 'Bearer ' + store.userToken
         }
@@ -124,7 +124,6 @@ onUnmounted(() => {
     }
 });
 
-//*********************************** countdown do proximo ping  ************************/
 </script>
 
 <template>
